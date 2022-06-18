@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anti_theft_detection"
+            android:textColor="#fff"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.04"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageButton3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/antithefthome"
+            android:contentDescription=""
+            android:padding="50dp"
+            android:scaleType="centerInside"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/i1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/proximity"/>
+
+                        <TextView
+                            android:id="@+id/tt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Proximity Detection"
+                            android:layout_toRightOf="@+id/i1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="#000000"
+                            android:layout_marginStart="20dp"
+                            android:letterSpacing="0.03"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Detect Remove from Pocket"
+                            android:layout_toEndOf="@+id/i1"
+                            android:layout_below="@id/tt1"
+                            android:textSize="14sp"
+                            android:textColor="#252627"
+                            android:layout_marginTop="40dp"/>
+
+                        <Switch
+                            android:text="Proximity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="93dp"
+                            android:textSize="12sp"
+                            android:id="@+id/sProximity"
+                            android:textColor="#000000"
+                            android:layout_alignParentEnd="true"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:layout_below="@id/r1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/i2"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/shake"/>
+
+                        <TextView
+                            android:id="@+id/tt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Motion Detection"
+                            android:layout_toEndOf="@+id/i2"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="#000000"
+                            android:layout_marginStart="20dp"
+                            android:letterSpacing="0.03"/>
+
+                        <Switch
+                            android:text="Motion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="93dp"
+                            android:textSize="12sp"
+                            android:id="@+id/sMotion"
+                            android:textColor="#000000"
+                            android:layout_alignParentEnd="true"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:layout_below="@id/r2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/i3"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/charger"/>
+
+                        <TextView
+                            android:id="@+id/tt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Charger Detection"
+                            android:layout_toEndOf="@+id/i3"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="#000000"
+                            android:layout_marginStart="20dp"
+                            android:letterSpacing="0.03"/>
+
+                        <Switch
+                            android:text="Charger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="93dp"
+                            android:textSize="12sp"
+                            android:id="@+id/sCharger"
+                            android:textColor="#000000"
+                            android:layout_alignParentEnd="true"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

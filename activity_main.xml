@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingTop="20dp"
+    android:paddingRight="50dp"
+    android:paddingBottom="30dp"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageButton3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/antithefthome"
+        android:contentDescription=""
+        android:padding="50dp"
+        android:scaleType="centerInside"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/Textview_style_homepage"
+        android:fontFamily="serif-monospace"
+        android:text="@string/anti_theft_detection" />
+
+    <ProgressBar
+        android:id="@+id/pb2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#ffffff"
+        android:padding="20dp" />
+
+
+</LinearLayout>

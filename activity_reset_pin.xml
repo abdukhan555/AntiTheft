@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reset_pin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:focusableInTouchMode="true"
+    tools:context=".ResetPin">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:paddingBottom="35dp">
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Old Password"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etOldPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUsername"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_lock"
+                        android:drawablePadding="30dp"
+                        android:inputType="numberPassword"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etOldPin"
+                        android:layout_margin="15dp"
+                        android:text="New Pin"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etSetPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPassword"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_lock"
+                        android:drawablePadding="30dp"
+                        android:inputType="numberPassword"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvconfirmpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etSetPin"
+                        android:layout_margin="15dp"
+                        android:text="Confirm New Pin"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etConfirmPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvconfirmpass"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_lock"
+                        android:drawablePadding="30dp"
+                        android:inputType="numberPassword"
+                        android:padding="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etConfirmPin"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginBottom="-20dp"
+                        android:elevation="10dp">
+
+                        <Button
+                            android:id="@+id/btnSetPin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/bt_uisquare"
+                            android:text="RESET"
+                            android:textAllCaps="false"
+                            android:textColor="@color/titletextcolor" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="-20dp"
+                android:elevation="10dp"
+                android:transitionName="circleTes">
+
+                <ImageButton
+                    android:id="@+id/btRegister"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/circle" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_alignBottom="@+id/cv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="-20dp"
+                android:elevation="10dp">
+
+                <Button
+                    android:id="@+id/btnForgotOldPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bt_uisquare"
+                    android:text="FORGET OLD PASSWORD?"
+                    android:textAllCaps="false"
+                    android:textColor="@color/titletextcolor" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
